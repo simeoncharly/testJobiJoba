@@ -1,0 +1,20 @@
+
+<html>
+  <head>
+    {% block stylesheets %}
+      <link href="{{ asset('css/main.css')}}" rel="stylesheet"/>
+      <h1 id="pageTitle">Les 10 dernières offres Pôle Emploi</h1>
+
+      {% for offers in results %}
+      <div id="tile">
+            <h3 id:"offerName"> {{offers.offerName}}</h3>
+              <div> <label id="subTitle">Description du poste : </label>{{ offers.description}}</div>
+              <div> <label id="subTitle">Lieu : </label>{{ offers.place}}</div>
+              <div> <label id="subTitle">Type de contrat : </label>{{ offers.typeContract}}</div>
+              <div> <label id="subTitle">Entreprise: : </label>{{ offers.company}}</div>
+      </div>
+      {% endfor %}
+
+    {% endblock%}
+  </head>
+</html>

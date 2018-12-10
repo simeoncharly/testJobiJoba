@@ -1,0 +1,6 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+app_GetPEOffers:
+  path: /getOffers/offers
+  controller: App\Controller\GetPEOffers::treatApiResults
